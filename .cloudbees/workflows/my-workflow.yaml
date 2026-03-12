@@ -16,7 +16,7 @@ jobs:
       - name: Get source code
         uses: cloudbees-io/checkout@v2
       - id: build-container
-        name: Build container Image
+        name: Build container Image 
         uses: docker://gcr.io/kaniko-project/executor:debug
         run: |
          /kaniko/executor --context $CLOUDBEES_WORKSPACE --dockerfile $CLOUDBEES_WORKSPACE/Dockerfile --tar-path $CLOUDBEES_WORKSPACE/container-image.tar --no-push
